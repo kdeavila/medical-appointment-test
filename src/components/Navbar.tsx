@@ -2,7 +2,7 @@ import { BuildingIcon } from './icons/BuildingIcon';
 
 export function Navbar() {
 	return (
-		<nav className="w-full bg-neutral-50 border-b border-neutral-300">
+		<nav className="w-full border-b border-neutral-300">
 			<div className="container-center flex justify-between mx-auto py-4">
 				<div className="flex justify-center gap-x-2">
 					<BuildingIcon className="size-6 text-blue-500" />
