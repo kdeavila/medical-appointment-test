@@ -8,7 +8,7 @@ export function Service({ title, desc }: { title: string; desc: string }) {
 			</div>
 
 			<h4 className="font-semibold text-xl">{title}</h4>
-			<p className="text-neutral-700 text-balance font-normal">{desc}</p>
+			<p className="text-neutral-600 text-balance font-normal">{desc}</p>
 		</li>
 	);
 }
