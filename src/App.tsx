@@ -1,18 +1,24 @@
 import { Navbar } from './components/Navbar';
 import heroImage from './assets/hero.png';
 import { Service } from './components/Service';
+import { HomeIcon } from './components/icons/HomeIcon';
+import { ClipIcon } from './components/icons/ClipIcon';
+import { ClipboardIcon } from './components/icons/ClipboardIcon';
 
 function App() {
 	const SERVICES = [
 		{
+			icon: <HomeIcon />,
 			title: 'General Medicine',
 			desc: 'General medicine consultations for diagnosis and treatment of common illnesses.',
 		},
 		{
+			icon: <ClipboardIcon />,
 			title: 'Dentistry',
 			desc: 'Complete dental exams, cleanings, and dental treatments.',
 		},
 		{
+			icon: <ClipIcon />,
 			title: 'Appointment Management',
 			desc: 'Easily schedule, view, and cancel your medical appointments from any device.',
 		},
@@ -23,7 +29,7 @@ function App() {
 			<header>
 				<Navbar />
 
-				<main className="py-16 bg-neutral-200/40" id='home'>
+				<main className="py-16 bg-neutral-200/40" id="home">
 					<section className="container-center grid grid-cols-1 gap-8 md:grid-cols-2">
 						<article className="flex flex-col justify-center gap-4 col-span-1 order-2 md:order-1">
 							<h1 className="text-4xl md:text-5xl font-bold text-pretty leading-tight">
@@ -62,8 +68,8 @@ function App() {
 				<h3 className="text-3xl font-bold mb-8 text-center">Services</h3>
 
 				<ul className="grid grid-cols-1 md:grid-cols-3 gap-8">
-					{SERVICES.map(({ title, desc }) => (
-						<Service title={title} desc={desc} />
+					{SERVICES.map(({ icon, title, desc }) => (
+						<Service icon={icon} title={title} desc={desc} />
 					))}
 				</ul>
 			</section>
