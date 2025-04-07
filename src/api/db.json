@@ -1,0 +1,18 @@
+{
+	"patients": [
+		{
+			"id": "1",
+			"name": "Keyner de Ávila",
+			"email": "kdeavila.typescript@gmail.com",
+			"documentNumber": "1043126169",
+			"birthDate": "2005-12-03"
+		},
+		{
+			"id": "2",
+			"name": "Brayan de Ávila",
+			"email": "bdeavila200308@gmail.com",
+			"documentNumber": "8777243",
+			"birthDate": "2003-03-08"
+		}
+	]
+}
