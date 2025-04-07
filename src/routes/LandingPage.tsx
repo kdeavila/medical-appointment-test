@@ -30,9 +30,9 @@ export function LandingPage() {
 			<header>
 				<Navbar />
 
-				<main className="py-16 bg-neutral-100" id="home">
+				<main className="py-8 md:py-16 bg-neutral-100" id="home">
 					<section className="container-center grid grid-cols-1 gap-8 md:grid-cols-2">
-						<article className="flex flex-col justify-center gap-4 col-span-1 order-2 md:order-1">
+						<article className="flex flex-col justify-center gap-4 col-span-1">
 							<h1 className="text-4xl md:text-5xl font-bold text-pretty leading-tight">
 								Schedule your medical appointment online
 							</h1>
@@ -52,7 +52,7 @@ export function LandingPage() {
 							</Link>
 						</article>
 
-						<article className="col-span-1 order-1">
+						<article className="col-span-1">
 							<div className="h-full flex items-center justify-center">
 								<img
 									src={heroImage}

@@ -73,7 +73,7 @@ export function Login() {
 							Document number
 						</label>
 						<input
-							className={`border-1 border-neutral-400 outline-0 py-2 px-4 rounded-lg transition-colors ${errors.documentNumber?.message ? 'border-red-500' : 'focus:border-blue-500'}`}
+							className={`w-full border-1 border-neutral-400 outline-0 py-2 px-4 rounded-lg transition-colors ${errors.documentNumber?.message ? 'border-red-500' : 'focus:border-blue-500'}`}
 							type="number"
 							id="documentNumber"
 							placeholder="123456789"
@@ -91,7 +91,7 @@ export function Login() {
 							Birth of date
 						</label>
 						<input
-							className={`border-1 border-neutral-400 outline-0 py-2 px-4 rounded-lg transition-colors ${errors.birthDate?.message ? 'border-red-500' : 'focus:border-blue-500'}`}
+							className={`w-full border-1 border-neutral-400 outline-0 py-2 px-4 rounded-lg transition-colors ${errors.birthDate?.message ? 'border-red-500' : 'focus:border-blue-500'}`}
 							type="date"
 							min="1905-01-01"
 							id="birthDate"
