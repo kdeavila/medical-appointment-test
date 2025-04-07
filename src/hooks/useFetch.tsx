@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Patient } from '../types';
+import { Patient, Specialty } from '../types';
 
 export function useFetch<T>(endpoint: string) {
 	const baseUrl = 'http://localhost:3000';
@@ -34,4 +34,8 @@ export function useFetch<T>(endpoint: string) {
 
 export function usePatient() {
 	return useFetch<Patient[]>('/patients');
+}
+
+export function useSpecialty() {
+	return useFetch<Specialty[]>('/specialty');
 }

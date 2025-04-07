@@ -4,6 +4,7 @@ import { Login } from './routes/Login';
 import { Home } from './routes/Home';
 import { PrivateRoutes } from './libs/PrivateRoutes';
 import { RestrictedRoutes } from './libs/RestrictedRoutes';
+import { NotFound } from './routes/NotFound';
 
 function App() {
 	return (
@@ -17,6 +18,8 @@ function App() {
 			<Route element={<PrivateRoutes />}>
 				<Route path="/home" element={<Home />} />
 			</Route>
+
+			<Route path='*' element={<NotFound />} />
 		</Routes>
 	);
 }

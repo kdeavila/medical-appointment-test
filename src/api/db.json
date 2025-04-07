@@ -14,5 +14,15 @@
 			"documentNumber": "8777243",
 			"birthDate": "2003-03-08"
 		}
+	],
+	"specialty": [
+		{
+			"id": "1",
+			"name": "general-medicine"
+		},
+		{
+			"id": "2",
+			"name": "dental"
+		}
 	]
 }

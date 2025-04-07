@@ -9,7 +9,12 @@ export type Patient = {
 	email: string;
 	documentNumber: string;
 	birthDate: string;
-}
+};
+
+export type Specialty = {
+	id: number;
+	name: string;
+};
 
 export type AuthState = {
 	patient: Patient | null;
