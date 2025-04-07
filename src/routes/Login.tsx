@@ -63,7 +63,7 @@ export function Login() {
 
 				<form
 					onSubmit={handleSubmit(onSubmit)}
-					className="w-full max-w-lg mx-auto flex flex-col gap-4 p-8 rounded-lg bg-neutral-50"
+					className="w-full max-w-lg mx-auto flex flex-col gap-4 p-8 rounded-lg bg-neutral-100"
 				>
 					<div className="flex flex-col gap-2">
 						<label

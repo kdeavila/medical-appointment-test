@@ -30,7 +30,7 @@ export function LandingPage() {
 			<header>
 				<Navbar />
 
-				<main className="py-16 bg-neutral-50" id="home">
+				<main className="py-16 bg-neutral-100" id="home">
 					<section className="container-center grid grid-cols-1 gap-8 md:grid-cols-2">
 						<article className="flex flex-col justify-center gap-4 col-span-1 order-2 md:order-1">
 							<h1 className="text-4xl md:text-5xl font-bold text-pretty leading-tight">
