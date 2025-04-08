@@ -1,10 +1,10 @@
-import { ClipboardIcon } from '../components/icons/ClipboardIcon';
-import { ClipIcon } from '../components/icons/ClipIcon';
-import { HomeIcon } from '../components/icons/HomeIcon';
+import { Link } from 'react-router';
+import heroImage from '../assets/hero.png';
 import { Navbar } from '../components/Navbar';
 import { Service } from '../components/Service';
-import heroImage from '../assets/hero.png';
-import { Link } from 'react-router';
+import { ClipIcon } from '../components/icons/ClipIcon';
+import { ClipboardIcon } from '../components/icons/ClipboardIcon';
+import { HomeIcon } from '../components/icons/HomeIcon';
 
 export function LandingPage() {
 	const SERVICES = [

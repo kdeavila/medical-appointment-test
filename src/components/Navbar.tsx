@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router';
 import { useAuth } from '../store/useAuth';
 import { BuildingIcon } from './icons/BuildingIcon';
-import { UserIcon } from './icons/ChevronDownIcon';
 import { LogoutIcon } from './icons/LogoutIcon';
+import { UserIcon } from './icons/UserIcon';
 
 export function Navbar() {
 	const { patient, isAuthenticated, logout } = useAuth();

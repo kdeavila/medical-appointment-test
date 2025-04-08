@@ -1,13 +1,23 @@
-import { useSpecialty } from '../hooks/useFetch';
 import { useState } from 'react';
+import { useAppointments, useSpecialty } from '../hooks/useFetch';
+import { groupAppointmentsByDate } from '../utils/appointment';
+import { AppointmentList } from './AppointmentList';
 
 export function ScheduleNow() {
-	const { data: specialties, loading } = useSpecialty();
+	const { data: specialties, loading: loadingSpecialty } = useSpecialty();
+	const { data: appointments } = useAppointments();
 	const [selectedSpecialty, setSelectedSpecialty] = useState('');
+
+	const availableAppointments = appointments?.filter(
+		(appt) =>
+			appt.status === 'available' && appt.specialtyId === selectedSpecialty,
+	);
+
+	const grouped = groupAppointmentsByDate(availableAppointments ?? []);
 
 	return (
 		<>
-			<form className="flex flex-col gap-4 max-w-md">
+			<form className="flex flex-col gap-4 max-w-lg">
 				<div className="flex flex-col gap-2">
 					<label
 						htmlFor="specialty"
@@ -23,12 +33,12 @@ export function ScheduleNow() {
 						value={selectedSpecialty}
 						onChange={(e) => setSelectedSpecialty(e.target.value)}
 					>
-						<option disabled value="">
-							{loading ? 'Loading specialties...' : 'Choose one'}
+						<option value="" disabled>
+							{loadingSpecialty ? 'Loading specialties...' : 'Choose one'}
 						</option>
 
 						{specialties?.map(({ id, name }) => (
-							<option key={id} value={String(id)}>
+							<option key={id} value={id}>
 								{name}
 							</option>
 						))}
@@ -36,23 +46,22 @@ export function ScheduleNow() {
 				</div>
 			</form>
 
-			<section className="mt-6">
-				{selectedSpecialty ? (
-					<p className="text-blue-600">
-						Showing available appointments for{' '}
-						<strong>
-							{
-								specialties?.find((s) => String(s.id) === selectedSpecialty)
-									?.name
-							}
-						</strong>
-					</p>
+			{selectedSpecialty ? (
+				Object.keys(grouped).length > 0 ? (
+					<AppointmentList
+						appointments={grouped}
+						specialtyId={selectedSpecialty}
+					/>
 				) : (
-					<p className="text-neutral-500">
-						Please select a specialty to view appointments.
+					<p className="text-neutral-400 mt-4">
+						No available appointments for this specialty.
 					</p>
-				)}
-			</section>
+				)
+			) : (
+				<p className="text-neutral-400 mt-4">
+					Please select a specialty to view appointments.
+				</p>
+			)}
 		</>
 	);
 }

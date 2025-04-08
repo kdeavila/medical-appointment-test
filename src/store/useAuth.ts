@@ -1,6 +1,6 @@
 import { create } from 'zustand';
-import { AuthState } from '../types';
 import { persist } from 'zustand/middleware';
+import { AuthState } from '../types';
 
 export const useAuth = create<AuthState>()(
 	persist(

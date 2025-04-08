@@ -1,12 +1,12 @@
 import { zodResolver } from '@hookform/resolvers/zod';
-import { BuildingIcon } from '../components/icons/BuildingIcon';
-import { useForm } from 'react-hook-form';
-import { loginSchema } from '../schema/loginSchema';
-import { FormLogin } from '../types';
-import { usePatient } from '../hooks/useFetch';
 import { useState } from 'react';
+import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router';
+import { BuildingIcon } from '../components/icons/BuildingIcon';
+import { usePatient } from '../hooks/useFetch';
+import { loginSchema } from '../schema/loginSchema';
 import { useAuth } from '../store/useAuth';
+import { FormLogin } from '../types';
 
 export function Login() {
 	const [loginError, setloginError] = useState<string | null>(null);

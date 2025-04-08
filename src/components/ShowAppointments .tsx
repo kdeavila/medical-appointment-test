@@ -1,3 +1,3 @@
 export function ShowAppointments() {
-    return <div>2</div>
+	return <div>2</div>;
 }

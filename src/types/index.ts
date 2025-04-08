@@ -4,7 +4,7 @@ export type FormLogin = {
 };
 
 export type Patient = {
-	id: number;
+	id: string;
 	name: string;
 	email: string;
 	documentNumber: string;
@@ -12,8 +12,17 @@ export type Patient = {
 };
 
 export type Specialty = {
-	id: number;
+	id: string;
 	name: string;
+};
+
+export type Appointment = {
+	id: string;
+	date: string;
+	time: string;
+	doctor: string;
+	specialtyId: string;
+	status: 'available' | 'booked';
 };
 
 export type AuthState = {

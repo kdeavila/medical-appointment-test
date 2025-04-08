@@ -1,4 +1,8 @@
-export function Service({ icon, title, desc }: { icon: React.ReactNode; title: string; desc: string }) {
+export function Service({
+	icon,
+	title,
+	desc,
+}: { icon: React.ReactNode; title: string; desc: string }) {
 	return (
 		<li className="flex flex-col gap-2 p-8 bg-neutral-100 rounded-lg">
 			<div className="rounded-full p-4 bg-blue-200 w-max text-blue-500">
