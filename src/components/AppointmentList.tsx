@@ -9,9 +9,9 @@ interface Props {
 
 export function AppointmentList({ appointments }: Props) {
 	return (
-		<div className="mt-8 space-y-6">
+		<>
 			{Object.entries(appointments).map(([date, items]) => (
-				<div key={date}>
+				<div key={date} className="mt-8 space-y-6">
 					<h3 className="font-bold text-lg mb-2">{formatLongDate(date)}</h3>
 
 					<div className="space-y-4">
@@ -21,6 +21,6 @@ export function AppointmentList({ appointments }: Props) {
 					</div>
 				</div>
 			))}
-		</div>
+		</>
 	);
 }

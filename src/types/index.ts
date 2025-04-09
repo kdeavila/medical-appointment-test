@@ -31,3 +31,9 @@ export type AuthState = {
 	setPatient: (patient: Patient) => void;
 	logout: () => void;
 };
+
+export type AppointmentState = {
+	appointments: Appointment[];
+	setAppointments: (appointments: Appointment[]) => void;
+	updateAppointment: (updated: Appointment) => void;
+};

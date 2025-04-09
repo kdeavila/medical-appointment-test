@@ -1,12 +1,20 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useAppointments, useSpecialty } from '../hooks/useFetch';
+import { useAppointmentStore } from '../store/appointmentStore';
 import { groupAppointmentsByDate } from '../utils/appointment';
 import { AppointmentList } from './AppointmentList';
 
 export function ScheduleNow() {
 	const { data: specialties, loading: loadingSpecialty } = useSpecialty();
-	const { data: appointments } = useAppointments();
+	const { data: fetchedAppointments } = useAppointments();
 	const [selectedSpecialty, setSelectedSpecialty] = useState('');
+	const { appointments, setAppointments } = useAppointmentStore();
+
+	useEffect(() => {
+		if (fetchedAppointments) {
+			setAppointments(fetchedAppointments);
+		}
+	}, [fetchedAppointments, setAppointments]);
 
 	const availableAppointments = appointments?.filter(
 		(appt) =>

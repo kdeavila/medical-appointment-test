@@ -23,10 +23,12 @@ export function Home() {
 
 			<main className="relative">
 				<div className="container-center py-8">
-					<h3 className="text-2xl font-bold mb-1">
+					<h3 className="text-3xl md:text-4xl text-balance leading-snug font-bold mb-1">
 						Welcome Mr/s. {patient?.name}
 					</h3>
-					<p className="text-neutral-700">Select an option to continue</p>
+					<p className="text-neutral-700 text-base md:text-lg">
+						Select an option to continue
+					</p>
 
 					<section className="mt-8 flex flex-col gap-2">
 						<div className="flex items-center gap-x-2">

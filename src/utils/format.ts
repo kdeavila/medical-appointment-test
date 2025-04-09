@@ -1,7 +1,7 @@
 export function formatLongDate(dateString: string): string {
-	const date = new Date(dateString);
+	const date = new Date(dateString + 'T00:00:00');
 
-	return new Intl.DateTimeFormat('es-CO', {
+	return new Intl.DateTimeFormat('en-ES', {
 		weekday: 'long',
 		day: 'numeric',
 		month: 'long',
