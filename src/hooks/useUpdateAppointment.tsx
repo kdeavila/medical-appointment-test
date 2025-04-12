@@ -13,9 +13,7 @@ export function useUpdateAppointment<T>(id: string) {
 		try {
 			setLoading(true);
 			setError(null);
-
-			console.log('Here');
-
+			
 			const res = await fetch(url, {
 				method: 'PATCH',
 				headers: {

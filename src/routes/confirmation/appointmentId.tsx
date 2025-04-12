@@ -3,6 +3,7 @@ import { useNavigate, useParams } from 'react-router';
 import { CheckIcon } from '../../components/icons/CheckIcon';
 import { useAppointmentStore } from '../../store/appointmentStore';
 import { formatLongDate } from '../../utils/format';
+import { useSpecialty } from '../../hooks/useFetch';
 
 export function Confirmation() {
 	const { appointmentId } = useParams();
@@ -11,6 +12,9 @@ export function Confirmation() {
 	const appointment = useAppointmentStore((state) =>
 		state.appointments.find((appt) => appt.id === appointmentId),
 	);
+
+	const { data: specialties } = useSpecialty();
+	const specialty = specialties?.find((s) => s.id === appointment?.specialtyId);
 
 	useEffect(() => {
 		if (!appointment) {
@@ -66,6 +70,11 @@ export function Confirmation() {
 					<div>
 						<p className="font-semibold text-neutral-700">Doctor</p>
 						<p className="text-neutral-600">{appointment.doctor}</p>
+					</div>
+
+					<div>
+						<p className="font-semibold text-neutral-700">Specialty</p>
+						<p className="text-neutral-600">{specialty?.name}</p>
 					</div>
 
 					<footer className="bg-blue-100 px-4 py-3 rounded-md">

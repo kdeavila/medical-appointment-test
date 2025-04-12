@@ -1,23 +1,37 @@
-import { useNavigate } from 'react-router';
 import { useUpdateAppointment } from '../hooks/useUpdateAppointment';
 import { useAppointmentStore } from '../store/appointmentStore';
 import type { Appointment } from '../types';
 import { UserIcon } from './icons/UserIcon';
+import { useAuth } from '../store/useAuth';
+import { useNavigate } from 'react-router';
 
 export function AppointmentCard({ appointment }: { appointment: Appointment }) {
-	const id = appointment.id;
-	const { updateAppointment } = useUpdateAppointment<Appointment>(id);
+	const { id: appointmentId, status, doctor, time } = appointment;
+
+	const { patient } = useAuth();
+	const patientId = patient?.id;
+
+	const { updateAppointment } =
+		useUpdateAppointment<Appointment>(appointmentId);
 	const { updateAppointment: updateStore } = useAppointmentStore();
+
 	const navigate = useNavigate();
 
+	const isAvailable = status === 'available';
+
 	const onClick = async () => {
-		const updated = await updateAppointment({ status: 'booked' });
+		const updated = await updateAppointment({
+			status: isAvailable ? 'booked' : 'available',
+			patientId: isAvailable ? patientId : null,
+		});
 
 		if (updated) {
 			updateStore(updated);
 		}
 
-		navigate(`/confirmation/${updated?.id}`);
+		if (isAvailable) {
+			navigate(`/confirmation/${updated?.id}`);
+		}
 	};
 
 	return (
@@ -29,18 +43,18 @@ export function AppointmentCard({ appointment }: { appointment: Appointment }) {
 
 				<div>
 					<strong className="text-base font-semibold text-wrap">
-						{appointment.doctor}
+						{doctor}
 					</strong>
-					<p className="text-sm text-neutral-600">{appointment.time}</p>
+					<p className="text-sm text-neutral-600">{time}</p>
 				</div>
 			</div>
 
 			<button
 				type="button"
 				onClick={onClick}
-				className="inline-flex w-max px-4 py-2 rounded-lg bg-blue-500 text-neutral-100 cursor-pointer"
+				className={`inline-flex w-max px-4 py-2 rounded-lg text-neutral-100 cursor-pointer ${isAvailable ? 'bg-blue-500' : 'bg-red-500'}`}
 			>
-				Reserve
+				{isAvailable ? 'Schedule' : 'Cancel'}
 			</button>
 		</div>
 	);

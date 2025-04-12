@@ -23,6 +23,7 @@ export type Appointment = {
 	doctor: string;
 	specialtyId: string;
 	status: 'available' | 'booked';
+	patientId: string | null;
 };
 
 export type AuthState = {

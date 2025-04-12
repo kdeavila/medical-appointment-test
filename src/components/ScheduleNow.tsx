@@ -25,7 +25,7 @@ export function ScheduleNow() {
 
 	return (
 		<>
-			<form className="flex flex-col gap-4 max-w-lg">
+			<form className="flex flex-col gap-4 max-w-lg mb-8">
 				<div className="flex flex-col gap-2">
 					<label
 						htmlFor="specialty"
@@ -56,10 +56,7 @@ export function ScheduleNow() {
 
 			{selectedSpecialty ? (
 				Object.keys(grouped).length > 0 ? (
-					<AppointmentList
-						appointments={grouped}
-						specialtyId={selectedSpecialty}
-					/>
+					<AppointmentList appointments={grouped} />
 				) : (
 					<p className="text-neutral-400 mt-4">
 						No available appointments for this specialty.
