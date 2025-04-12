@@ -70,7 +70,7 @@ export function LandingPage() {
 
 				<ul className="grid grid-cols-1 md:grid-cols-3 gap-8">
 					{SERVICES.map(({ icon, title, desc }) => (
-						<Service icon={icon} title={title} desc={desc} />
+						<Service key={title} icon={icon} title={title} desc={desc} />
 					))}
 				</ul>
 			</section>

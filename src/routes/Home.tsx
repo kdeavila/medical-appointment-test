@@ -35,7 +35,7 @@ export function Home() {
 							{TABS.map((tab) => (
 								<button
 									key={tab.value}
-									className={`inline-flex w-max px-4 py-2 rounded-lg cursor-pointer border ${
+									className={`inline-flex w-max px-4 py-2 rounded-lg cursor-pointer border text-sm md:text-base ${
 										tabContent === tab.value
 											? 'bg-blue-500 text-neutral-100 border-transparent'
 											: 'border-blue-500 text-blue-500 bg-transparent'
