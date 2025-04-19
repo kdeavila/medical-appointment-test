@@ -1,54 +1,105 @@
-# React + TypeScript + Vite
+# Medical IPS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Doctor appointment booking system for IPS patients**
 
-Currently, two official plugins are available:
+Medical IPS is a single-page web application (SPA) built with React and TypeScript that enables patients to:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Authenticate using their ID number and date of birth
+- Select a medical specialty (General Medicine, Dentistry, Pediatrics, Dermatology, etc.)
+- View and group available appointments by date
+- Book and cancel appointments in real time
+- Access a history of their scheduled appointments
+- Receive a confirmation screen after booking
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📋 Features
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **Secure Login**: Form validation via React Hook Form & Zod
+- **Protected Routes**: Using React Router v6 for authenticated access
+- **Global State Management**: Zustand to handle authentication and appointment data
+- **Mock API**: JSON Server (or a combination of JSON files + localStorage) simulates backend endpoints
+- **Responsive Design**: Tailwind CSS for utility-first styling
+- **User Feedback**: Loading indicators, error messages, and booking confirmations
+
+---
+
+## 🚀 Technology Stack
+
+- **React** (v18+) with **TypeScript**
+- **Vite** for fast development and bundling
+- **React Router** for client-side routing
+- **React Hook Form** + **Zod** for declarative form validation
+- **Zustand** for lightweight global state
+- **JSON Server** (or JSON + localStorage) as a mock API
+- **Tailwind CSS** for styling
+- **Figma** for prototype and mockup design
+
+---
+
+## 📦 Installation
+
+> Requires Node.js v16+ and npm or pnpm
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/kdeavila/medical-appointment-test
+   cd medical-appointment-test
+   ```
+2. Install dependencies:
+   ```bash
+   pnpm install
+   # or npm install
+   ```
+3. Start the mock API (JSON Server):
+   ```bash
+   pnpm run json-server
+   # API available at http://localhost:3000
+   ```
+4. Launch the development server:
+   ```bash
+   pnpm run dev
+   # App available at http://localhost:5173
+   ```
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+├─ components/         # Reusable UI components (cards, lists, icons)
+├─ hooks/              # Custom hooks (useFetch, useUpdateAppointment)
+├─ routes/             # Pages: Login, ScheduleNow, ShowAppointments, Confirmation
+├─ store/              # Zustand stores: auth, appointments
+├─ utils/              # Helper functions: date formatting, grouping logic
+├─ App.tsx             # Route definitions and layout
+└─ main.tsx            # Entry point
+public/
+├─ index.html         # Static HTML template
+db.json               # Mock data for JSON Server
+vite.config.ts        # Vite configuration
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ⚙️ Available Scripts
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+pnpm run dev           # Start frontend at http://localhost:5173
+pnpm run build         # Create production build
+pnpm run preview       # Preview production build locally
+pnpm run json-server   # Launch JSON Server at http://localhost:3000
 ```
+
+---
+
+## 📖 Usage
+
+1. Navigate to `/login` and enter your ID number and birth date.
+2. Choose a specialty and view available appointments.
+3. Click **Book** to reserve an appointment. You will be redirected to `/confirmation/:id`.
+4. Visit the **My Appointments** section to see upcoming and past bookings.
+5. Click **Cancel** on any booked appointment to release it back to available status.
+
+---
