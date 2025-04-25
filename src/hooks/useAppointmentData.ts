@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Appointment, Patient, Specialty } from '../types';
 
-export function useFetch<T>(endpoint: string) {
+export function useAppointmentData<T>(endpoint: string) {
 	const baseUrl = 'http://localhost:3000';
 
 	const [data, setData] = useState<T | null>(null);
@@ -33,13 +33,13 @@ export function useFetch<T>(endpoint: string) {
 }
 
 export function usePatient() {
-	return useFetch<Patient[]>('/patients');
+	return useAppointmentData<Patient[]>('/patients');
 }
 
 export function useSpecialty() {
-	return useFetch<Specialty[]>('/specialty');
+	return useAppointmentData<Specialty[]>('/specialty');
 }
 
 export function useAppointments() {
-	return useFetch<Appointment[]>('/appointments');
+	return useAppointmentData<Appointment[]>('/appointments');
 }

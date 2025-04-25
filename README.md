@@ -69,7 +69,7 @@ Medical IPS is a single-page web application (SPA) built with React and TypeScri
 ```
 src/
 ├─ components/         # Reusable UI components (cards, lists, icons)
-├─ hooks/              # Custom hooks (useFetch, useUpdateAppointment)
+├─ hooks/              # Custom hooks (useAppointmentData, useUpdateAppointment)
 ├─ routes/             # Pages: Login, ScheduleNow, ShowAppointments, Confirmation
 ├─ store/              # Zustand stores: auth, appointments
 ├─ utils/              # Helper functions: date formatting, grouping logic
