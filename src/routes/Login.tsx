@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router';
 import { BuildingIcon } from '../components/icons/BuildingIcon';
-import { usePatient } from '../hooks/useFetch';
+import { usePatient } from '../hooks/useAppointmentData';
 import { loginSchema } from '../schema/loginSchema';
 import { useAuth } from '../store/useAuth';
 import { FormLogin } from '../types';

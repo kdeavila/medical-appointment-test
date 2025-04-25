@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useAppointments, useSpecialty } from '../hooks/useFetch';
+import { useAppointments, useSpecialty } from '../hooks/useAppointmentData';
 import { useAppointmentStore } from '../store/appointmentStore';
 import { groupAppointmentsByDate } from '../utils/appointment';
 import { AppointmentList } from './AppointmentList';
