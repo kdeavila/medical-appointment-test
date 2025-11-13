@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Navbar } from '../components/Navbar';
 import { ScheduleNow } from '../components/ScheduleNow';
-import { ShowAppointments } from '../components/ShowAppointments ';
+import { ShowAppointments } from '../components/ShowAppointments';
 import { useAuth } from '../store/useAuth';
 
 export function Home() {
