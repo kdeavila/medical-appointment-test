@@ -1,9 +1,9 @@
+import { useNavigate } from 'react-router';
 import { useUpdateAppointment } from '../hooks/useUpdateAppointment';
 import { useAppointmentStore } from '../store/appointmentStore';
+import { useAuth } from '../store/useAuth';
 import type { Appointment } from '../types';
 import { UserIcon } from './icons/UserIcon';
-import { useAuth } from '../store/useAuth';
-import { useNavigate } from 'react-router';
 
 export function AppointmentCard({ appointment }: { appointment: Appointment }) {
 	const { id: appointmentId, status, doctor, time } = appointment;
@@ -52,7 +52,11 @@ export function AppointmentCard({ appointment }: { appointment: Appointment }) {
 			<button
 				type="button"
 				onClick={onClick}
-				className={`inline-flex w-max px-4 py-2 rounded-lg text-neutral-100 cursor-pointer ${isAvailable ? 'bg-blue-500' : 'bg-red-500'}`}
+				className={`inline-flex w-max px-4 py-2 rounded-lg font-medium cursor-pointer border transition-colors ${
+					isAvailable
+						? 'border-blue-400 text-blue-400 hover:text-neutral-100 hover:bg-blue-500'
+						: 'text-red-400 border-red-400 hover:bg-red-500 hover:text-neutral-100'
+				}`}
 			>
 				{isAvailable ? 'Schedule' : 'Cancel'}
 			</button>

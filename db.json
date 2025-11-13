@@ -1,232 +1,241 @@
 {
-	"patients": [
-		{
-			"id": "1",
-			"name": "Keyner de Ávila",
-			"email": "kdeavila.typescript@gmail.com",
-			"documentNumber": "1043126169",
-			"birthDate": "2005-12-03"
-		},
-		{
-			"id": "2",
-			"name": "Brayan Gutiérrez",
-			"email": "bdeavila200308@gmail.com",
-			"documentNumber": "8777243",
-			"birthDate": "2003-03-08"
-		},
-		{
-			"id": "3",
-			"name": "Sofía Martínez",
-			"email": "sofia.martinez@gmail.com",
-			"documentNumber": "1234567890",
-			"birthDate": "1995-07-21"
-		},
-		{
-			"id": "4",
-			"name": "Carlos Pineda",
-			"email": "carlos.pineda@hotmail.com",
-			"documentNumber": "99887766",
-			"birthDate": "1988-11-10"
-		}
-	],
-	"specialty": [
-		{
-			"id": "1",
-			"name": "General medicine"
-		},
-		{
-			"id": "2",
-			"name": "Dental"
-		},
-		{
-			"id": "3",
-			"name": "Pediatrics"
-		},
-		{
-			"id": "4",
-			"name": "Dermatology"
-		}
-	],
-	"appointments": [
-		{
-			"id": "1",
-			"date": "2025-04-10",
-			"time": "09:00",
-			"doctor": "Dr. María Fernanda",
-			"specialtyId": "1",
-			"status": "available",
-			"patientId": null
-		},
-		{
-			"id": "2",
-			"date": "2025-04-10",
-			"time": "10:00",
-			"doctor": "Dr. María Fernanda",
-			"specialtyId": "1",
-			"status": "available",
-			"patientId": null
-		},
-		{
-			"id": "3",
-			"date": "2025-04-11",
-			"time": "11:30",
-			"doctor": "Dr. Julián Pérez",
-			"specialtyId": "1",
-			"status": "available",
-			"patientId": null
-		},
-		{
-			"id": "4",
-			"date": "2025-04-11",
-			"time": "12:00",
-			"doctor": "Dr. Julián Pérez",
-			"specialtyId": "1",
-			"status": "available",
-			"patientId": null
-		},
-		{
-			"id": "5",
-			"date": "2025-04-12",
-			"time": "14:00",
-			"doctor": "Dr. Camila Ríos",
-			"specialtyId": "2",
-			"status": "available",
-			"patientId": null
-		},
-		{
-			"id": "6",
-			"date": "2025-04-12",
-			"time": "15:00",
-			"doctor": "Dr. Camila Ríos",
-			"specialtyId": "2",
-			"status": "available",
-			"patientId": null
-		},
-		{
-			"id": "7",
-			"date": "2025-04-13",
-			"time": "10:00",
-			"doctor": "Dr. Laura Méndez",
-			"specialtyId": "3",
-			"status": "available",
-			"patientId": null
-		},
-		{
-			"id": "8",
-			"date": "2025-04-14",
-			"time": "11:00",
-			"doctor": "Dr. Andrés Gómez",
-			"specialtyId": "4",
-			"status": "available",
-			"patientId": null
-		},
-		{
-			"id": "9",
-			"date": "2025-04-14",
-			"time": "12:00",
-			"doctor": "Dr. Andrés Gómez",
-			"specialtyId": "4",
-			"status": "available",
-			"patientId": null
-		},
-		{
-			"id": "10",
-			"date": "2025-04-15",
-			"time": "08:00",
-			"doctor": "Dr. Camila Ríos",
-			"specialtyId": "2",
-			"status": "available",
-			"patientId": null
-		},
-		{
-			"id": "11",
-			"date": "2025-04-15",
-			"time": "09:30",
-			"doctor": "Dr. Camila Ríos",
-			"specialtyId": "2",
-			"status": "available",
-			"patientId": null
-		},
-		{
-			"id": "12",
-			"date": "2025-04-16",
-			"time": "10:00",
-			"doctor": "Dr. Laura Méndez",
-			"specialtyId": "3",
-			"status": "available",
-			"patientId": null
-		},
-		{
-			"id": "13",
-			"date": "2025-04-16",
-			"time": "11:30",
-			"doctor": "Dr. Laura Méndez",
-			"specialtyId": "3",
-			"status": "available",
-			"patientId": null
-		},
-		{
-			"id": "14",
-			"date": "2025-04-17",
-			"time": "13:00",
-			"doctor": "Dr. Andrés Gómez",
-			"specialtyId": "4",
-			"status": "available",
-			"patientId": null
-		},
-		{
-			"id": "15",
-			"date": "2025-04-17",
-			"time": "14:30",
-			"doctor": "Dr. Andrés Gómez",
-			"specialtyId": "4",
-			"status": "available",
-			"patientId": null
-		},
-		{
-			"id": "16",
-			"date": "2025-04-18",
-			"time": "09:00",
-			"doctor": "Dr. Mario Sánchez",
-			"specialtyId": "1",
-			"status": "available",
-			"patientId": null
-		},
-		{
-			"id": "17",
-			"date": "2025-04-18",
-			"time": "10:30",
-			"doctor": "Dr. Mario Sánchez",
-			"specialtyId": "1",
-			"status": "available",
-			"patientId": null
-		},
-		{
-			"id": "18",
-			"date": "2025-04-19",
-			"time": "08:00",
-			"doctor": "Dr. Sandra Peñaloza",
-			"specialtyId": "3",
-			"status": "available",
-			"patientId": null
-		},
-		{
-			"id": "19",
-			"date": "2025-04-19",
-			"time": "09:30",
-			"doctor": "Dr. Sandra Peñaloza",
-			"specialtyId": "3",
-			"status": "available",
-			"patientId": null
-		},
-		{
-			"id": "20",
-			"date": "2025-04-20",
-			"time": "11:00",
-			"doctor": "Dr. Fernando Rivas",
-			"specialtyId": "1",
-			"status": "available",
-			"patientId": null
-		}
-	]
+  "patients": [
+    {
+      "id": "1",
+      "name": "Keyner de Ávila",
+      "email": "kda.typescript@gmail.com",
+      "documentNumber": "1043667234",
+      "birthDate": "2005-12-03"
+    },
+    {
+      "id": "2",
+      "name": "John Doe",
+      "email": "johndoe_smith@gmail.com",
+      "documentNumber": "76877623",
+      "birthDate": "2003-03-08"
+    },
+    {
+      "id": "3",
+      "name": "Sofía Martínez",
+      "email": "sofia.martinez@gmail.com",
+      "documentNumber": "1234567890",
+      "birthDate": "1995-07-21"
+    },
+    {
+      "id": "4",
+      "name": "Carlos Pineda",
+      "email": "carlos.pineda@hotmail.com",
+      "documentNumber": "99887766",
+      "birthDate": "1988-11-10"
+    }
+  ],
+  "specialty": [
+    {
+      "id": "1",
+      "name": "General medicine"
+    },
+    {
+      "id": "2",
+      "name": "Dental"
+    },
+    {
+      "id": "3",
+      "name": "Pediatrics"
+    },
+    {
+      "id": "4",
+      "name": "Dermatology"
+    }
+  ],
+  "appointments": [
+    {
+      "id": "1",
+      "date": "2025-04-10",
+      "time": "09:00",
+      "doctor": "Dr. María Fernanda",
+      "specialtyId": "1",
+      "status": "available",
+      "patientId": null
+    },
+    {
+      "id": "2",
+      "date": "2025-04-10",
+      "time": "10:00",
+      "doctor": "Dr. María Fernanda",
+      "specialtyId": "1",
+      "status": "booked",
+      "patientId": "1"
+    },
+    {
+      "id": "3",
+      "date": "2025-04-11",
+      "time": "11:30",
+      "doctor": "Dr. Julián Pérez",
+      "specialtyId": "1",
+      "status": "available",
+      "patientId": null
+    },
+    {
+      "id": "4",
+      "date": "2025-04-11",
+      "time": "12:00",
+      "doctor": "Dr. Julián Pérez",
+      "specialtyId": "1",
+      "status": "available",
+      "patientId": null
+    },
+    {
+      "id": "5",
+      "date": "2025-04-12",
+      "time": "14:00",
+      "doctor": "Dr. Camila Ríos",
+      "specialtyId": "2",
+      "status": "available",
+      "patientId": null
+    },
+    {
+      "id": "6",
+      "date": "2025-04-12",
+      "time": "15:00",
+      "doctor": "Dr. Camila Ríos",
+      "specialtyId": "2",
+      "status": "available",
+      "patientId": null
+    },
+    {
+      "id": "7",
+      "date": "2025-04-13",
+      "time": "10:00",
+      "doctor": "Dr. Laura Méndez",
+      "specialtyId": "3",
+      "status": "available",
+      "patientId": null
+    },
+    {
+      "id": "8",
+      "date": "2025-04-14",
+      "time": "11:00",
+      "doctor": "Dr. Andrés Gómez",
+      "specialtyId": "4",
+      "status": "available",
+      "patientId": null
+    },
+    {
+      "id": "9",
+      "date": "2025-04-14",
+      "time": "12:00",
+      "doctor": "Dr. Andrés Gómez",
+      "specialtyId": "4",
+      "status": "available",
+      "patientId": null
+    },
+    {
+      "id": "10",
+      "date": "2025-04-15",
+      "time": "08:00",
+      "doctor": "Dr. Camila Ríos",
+      "specialtyId": "2",
+      "status": "available",
+      "patientId": null
+    },
+    {
+      "id": "11",
+      "date": "2025-04-15",
+      "time": "09:30",
+      "doctor": "Dr. Camila Ríos",
+      "specialtyId": "2",
+      "status": "available",
+      "patientId": null
+    },
+    {
+      "id": "12",
+      "date": "2025-04-16",
+      "time": "10:00",
+      "doctor": "Dr. Laura Méndez",
+      "specialtyId": "3",
+      "status": "available",
+      "patientId": null
+    },
+    {
+      "id": "13",
+      "date": "2025-04-16",
+      "time": "11:30",
+      "doctor": "Dr. Laura Méndez",
+      "specialtyId": "3",
+      "status": "available",
+      "patientId": null
+    },
+    {
+      "id": "14",
+      "date": "2025-04-17",
+      "time": "13:00",
+      "doctor": "Dr. Andrés Gómez",
+      "specialtyId": "4",
+      "status": "available",
+      "patientId": null
+    },
+    {
+      "id": "15",
+      "date": "2025-04-17",
+      "time": "14:30",
+      "doctor": "Dr. Andrés Gómez",
+      "specialtyId": "4",
+      "status": "available",
+      "patientId": null
+    },
+    {
+      "id": "16",
+      "date": "2025-04-18",
+      "time": "09:00",
+      "doctor": "Dr. Mario Sánchez",
+      "specialtyId": "1",
+      "status": "available",
+      "patientId": null
+    },
+    {
+      "id": "17",
+      "date": "2025-04-18",
+      "time": "10:30",
+      "doctor": "Dr. Mario Sánchez",
+      "specialtyId": "1",
+      "status": "available",
+      "patientId": null
+    },
+    {
+      "id": "18",
+      "date": "2025-04-19",
+      "time": "08:00",
+      "doctor": "Dr. Sandra Peñaloza",
+      "specialtyId": "3",
+      "status": "available",
+      "patientId": null
+    },
+    {
+      "id": "19",
+      "date": "2025-04-19",
+      "time": "09:30",
+      "doctor": "Dr. Sandra Peñaloza",
+      "specialtyId": "3",
+      "status": "available",
+      "patientId": null
+    },
+    {
+      "id": "20",
+      "date": "2025-04-20",
+      "time": "11:00",
+      "doctor": "Dr. Fernando Rivas",
+      "specialtyId": "1",
+      "status": "available",
+      "patientId": null
+    },
+    {
+      "id": "21",
+      "date": "2025-04-10",
+      "time": "12:00",
+      "doctor": "Dr. María Fernanda",
+      "specialtyId": "1",
+      "status": "available",
+      "patientId": null
+    }
+  ]
 }

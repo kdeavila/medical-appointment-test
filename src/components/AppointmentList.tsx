@@ -13,7 +13,7 @@ export function AppointmentList({ appointments }: Props) {
 				<div key={date} className="first:mt-0 mt-8 space-y-6">
 					<h3 className="font-bold text-lg mb-2">{formatLongDate(date)}</h3>
 
-					<div className="space-y-4">
+					<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
 						{items.map((appt) => (
 							<AppointmentCard key={appt.id} appointment={appt} />
 						))}

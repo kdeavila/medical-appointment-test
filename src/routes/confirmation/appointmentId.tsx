@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router';
 import { CheckIcon } from '../../components/icons/CheckIcon';
+import { useSpecialty } from '../../hooks/useAppointmentData';
 import { useAppointmentStore } from '../../store/appointmentStore';
 import { formatLongDate } from '../../utils/format';
-import { useSpecialty } from '../../hooks/useAppointmentData';
 
 export function Confirmation() {
 	const { appointmentId } = useParams();

@@ -13,7 +13,7 @@ export function useUpdateAppointment<T>(id: string) {
 		try {
 			setLoading(true);
 			setError(null);
-			
+
 			const res = await fetch(url, {
 				method: 'PATCH',
 				headers: {
