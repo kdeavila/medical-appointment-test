@@ -271,6 +271,6 @@ This is a personal project for learning and portfolio purposes. Contributions ar
 ## 📞 Contact
 
 - **Author**: Keyner de Ávila
-- [LinkedIn](https://github.com/kdeavila)
+- [LinkedIn](https://linkedin.com/in/kdeavila)
 
 **Made with ❤️ by Keyner de Ávila**
